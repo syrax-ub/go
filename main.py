@@ -49,7 +49,7 @@ def rocklinks_bypass(update ,context):
         joke= r.json()['url']
         bot.send_message(message.chat.id, joke) 
     except Exception as e:
-        bot.send_message(message.chat.id, str(e) 
+        bot.send_message(message.chat.id, str(e))
         return  
     
 dispatcher.add_handler(CommandHandler("link", rocklinks_bypass))
