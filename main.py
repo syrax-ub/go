@@ -5,8 +5,9 @@ import cloudscraper
 from bs4 import BeautifulSoup 
 from telegram import*
 from telegram.ext import*
+from os import getenv
 
-TOKEN= ""
+TOKEN= getenv(TOKEN, None)
  
 updater = Updater(TOKEN)
 dispatcher = updater.dispatcher
