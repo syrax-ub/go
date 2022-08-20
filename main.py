@@ -23,7 +23,7 @@ def rocklinks_bypass(update ,context):
     else:
         DOMAIN = "https://rocklink.in"
 
-    url = url[:-1] if url[-1] == '/' else url
+    url = url
 
     code = url.split("/")[-1]
     if 'rocklinks.net' in url:
