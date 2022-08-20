@@ -47,9 +47,9 @@ def rocklinks_bypass(update ,context):
     try:
         joke= r.json()['url']
         bot.send_message(message.chat.id, joke) 
-    except:
-        bot.send_message(message.chat.id, "something Went wrong") 
-       return 
+    except Exception as e:
+        bot.send_message(message.chat.id, str(e) 
+        return  
     
 dispatcher.add_handler(CommandHandler("link", rocklinks_bypass))
 updater.start_polling()
