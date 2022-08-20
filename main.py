@@ -7,7 +7,7 @@ from telegram import*
 from telegram.ext import*
 from os import getenv
 
-TOKEN= getenv(TOKEN, None)
+TOKEN= getenv("TOKEN", None)
  
 updater = Updater(TOKEN)
 dispatcher = updater.dispatcher
