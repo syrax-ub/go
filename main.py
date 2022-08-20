@@ -33,8 +33,10 @@ def rocklinks_bypass(update ,context):
     resp = client.get(final_url)
     soup = BeautifulSoup(resp.content, "html.parser")
     
-    try: inputs = soup.find(id="go-link").find_all(name="input")
-    except: return "Incorrect Link"
+    try: 
+      inputs = soup.find(id="go-link").find_all(name="input")
+    except: 
+        return #"Incorrect Link"
     
     data = { input.get('name'): input.get('value') for input in inputs }
 
